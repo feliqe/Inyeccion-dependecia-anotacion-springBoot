@@ -1,0 +1,20 @@
+Inyeccion de dependencias - Factura (version 3 de spring)
+
+* manejo de componente de spring por el models
+* estructura de la base de datos - data.properties
+* contenido de varibale de los productos - AppConfig
+* ruta modificada - InvoiceController
+
+* depdencias de lectura en AppConfig puede usar
+-- @Primary para indicar cual se ejecutara
+-- en Invoice.java @Qualifier("default") con el alias que se coloca en @Bean("default") en AppConfig e indicar cual se ejcutar por defecto, si  usar @Primary
+-- @PostConstruct: sirve para manipular (incorporar texto) los campos que estan instanciados ya que el contructor no los puede instanciar
+-- @PreDestroy: hacer una accion ante sde destruir los componente donde se declara
+-- @RequestScope: indicando que es un poxi y no es compoartido por toda la aplicacion y no agrupa cada carga
+-- @JsonIgnoreProperties: para ignorar campos espesificos del proxi
+-- @SessionScope: indicando que ya no es compartida por toda la aplicacion, dure la session cargando lo proxi
+
+- mostra listado de data en data.properties
+- calcular el precio por cantidad de productos
+- calcular el total de por items
+- concatenar palarbas dentro de los atributos de los models
